@@ -1,112 +1,78 @@
-<?php include "control/result.php"; ?>
-
+<?php   include "control\result.php" ; ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<h1>Registration Form</h1>
+
+<title>Registration Form </title>
+
 </head>
 <body>
-<hr>
-<form action="" method="post">
-	<table>
-		<tr>
-			<td>
-				Full Name:
-			</td>
+<table>
+<h1>Registration Form</h1>
+<form action="process.php" method="post" enctype="multipart/form-data">
+<tr>
+<td> Full Name : </td>
+<td><input type="text" name="name"> <?php echo $Name; ?> </td>
+</tr>
 
-			<td>
-				<input type=”text”  id=”fname” name=”fname”> 
-			</td>
-			<td>
-				<?php echo $validatename; ?>
-			</td>
-		</tr>
 
-        <tr>
-            <td>
-				E-mail:
-			</td>
+<tr>
+<td> Email :  </td>
+<td><input type="text" name="email"> <?php echo $validateemail; ?> </td>
+</tr>
 
-			<td>
-				<input type=”text” id=”email” name=”email”> 
-			</td>
-			<td>
-				<?php echo $validateemail; ?>
-			</td>
-		</tr>
 
-        <tr>
-            <td>
-				Password:
-			</td>
+<tr>
+<td>Password :  </td>
+<td><input type="password" name="password"><?php echo $validatepassword; ?></td>
+</tr>
 
-			<td>
-				<input type=”password” id=”password” name=”password”> 
-			</td>
-			<td>
-				<?php echo $validatepassword; ?>
-			</td>
-		</tr>
+<tr>
+<td>Comment :</td>
+<td><textarea rows="5" cols="30" name="comment"></textarea> <?php echo $validatecomment; ?></td>
+</tr>
 
-        <tr>
-            <td>
-				Comment:
-			</td>
 
-			<td>
-                <textarea id="comment" name="comment" rows="10" cols="50"> 
-                </textarea>
-			</td>
-			<td>
-				<?php echo $validatecomment; ?>
-			</td>
-		</tr>
+<tr>
+<td> Gender : </td>
+<td>
+<input type="radio" name="gender" value="Male"> Male 
+<input type="radio" name="gender" value="Female"> Female 
+<input type="radio"  name="gender" value="Other"> Other <br> <?php echo $validateradio; ?><br>
+</td>
+</tr>
 
-        <tr>
-            <td>
-				Gender:
-			</td>
+<tr>
+<td> Please Choose a Hobby :</td>
+<td>
 
-			<td>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-								
-			</td>
-			<td>
-				<?php echo $validategender; ?>
-			</td>
-		</tr>
+<input type="checkbox"  name="Singing" value="Singing"> Singing
+<input type="checkbox" name="Dancing" value="Dancing">Dancing
+<input type="checkbox" name="Reading" value="Reading">Reading <br> <?php echo $validatecheckbox; ?>
 
-        <tr>
-            <td>
-				Please choose a hobby:
-			</td>
+</td>
+</tr>
 
-			<td>
-                <input type="checkbox" id="singing" name="hobby" value="singing">
-                <label for="singing"> Singing</label>
-                <input type="checkbox" id="dancing" name="hobby" value="dancing">
-                <label for="dancing"> Dancing</label>
-                <input type="checkbox" id="reading" name="hobby" value="reading">
-                <label for="reading"> Reading</label>				
-			</td>
-			<td>
-				<?php echo $validatehobby; ?>
-				<?php echo $v1;?>
-				<?php echo $v2;?>
-				<?php echo $v3;?>
-			</td>
-		</tr>      
-	</table>
 
-    <input type="submit" value="Submit" name="button">
-    <input type="reset" value="Reset">  
 
-</form> 
+<tr>
+<td> <label for="file ">Please Choose a File : </label> </td>
+<td><input type="file" name="fileupload"><?php  echo  $validFile;    ?></td>
+</tr>
+
+
+<tr>
+<td> <input type="submit" name="Submit"> 
+<input type="reset" name="Reset">
+</td>
+</tr>
+
+
+</form>
+
+
+</table>
+
 </body>
 </html>
