@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Karim",
+        "email": "karim@gmail.com",
+        "password": "123456789123456789",
+        "comment": "this is a comment this is a comment hello!!!!!",
+        "gender": "Male",
+        "hobby": ",Singing,Reading",
+        "file_path": "File\/image.jpg"
+    },
+
+]
